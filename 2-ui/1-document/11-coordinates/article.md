@@ -36,7 +36,11 @@
 ```online
 아래 버튼을 눌러 창 기준 버튼 좌표를 확인해봅시다.
 
+<<<<<<< HEAD
 <p><input id="brTest" type="button" value="button.getBoundingClientRect()로 버튼 좌표 얻기" onclick='showRect(this)'/></p>
+=======
+<p><input id="brTest" type="button" style="max-width: 90vw;" value="Get coordinates using button.getBoundingClientRect() for this button" onclick='showRect(this)'/></p>
+>>>>>>> 035c5267ba80fa7b55878f7213cbde449b4092d9
 
 <script>
 function showRect(elem) {
