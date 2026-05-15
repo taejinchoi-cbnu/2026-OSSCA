@@ -79,7 +79,7 @@
 </script>
 ```
 
-알아두세요! 잘라내기·복사 이벤트 핸들러 내부에서 `event.clipboardData.getData(...)`를 호출하면 빈 문자열을 반환합니다. 이는 엄밀히 말하면 아직 데이터가 클립보드에 들어가 있지 않기 때문입니다. 또한 `event.preventDefault()`를 사용하면 아예 복사조차 하지 못합니다.
+알아두세요! 잘라내기·복사하기 이벤트 핸들러 내부에서 `event.clipboardData.getData(...)`를 호출하면 빈 문자열을 반환합니다. 이는 엄밀히 말하면 아직 데이터가 클립보드에 들어가 있지 않기 때문입니다. 또한 `event.preventDefault()`를 사용하면 아예 복사조차 하지 못합니다.
 
 따라서 위 예제는 `document.getSelection()`을 사용하여 선택한 텍스트를 가져옵니다. 문서 선택(document selection)에 대한 자세한 내용은 <info:selection-range>에서 다룹니다.
 
