@@ -101,8 +101,7 @@
     - 페이지 구성이 끝난 후에 async 스크립트 다운로딩이 끝난 경우, `DOMContentLoaded`는 async 스크립트 실행 전에 발생할 수 있습니다,
     - async 스크립트가 짧아서 페이지 구성이 끝나기 전에 다운로드 되거나 스크립트가 HTTP 캐시 처리 된 경우, `DOMContentLoaded`는 `async` 스크립트 실행 후에 발생할 수도 있습니다.
 
-
-In other words, `async` scripts load in the background and run when ready. The DOM and other scripts don't wait for them, and they don't wait for anything. A fully independent script that runs when loaded. As simple, as it can get, right?
+다시 말해 비동기 스크립트는 백그라운드에서 로드되어 준비가 되면 실행됩니다. DOM이나 다른 스크립트는 비동기 스크립트를 기다리지 않으며 비동기 스크립트 또한 그 어떤 것도 기다리지 않습니다. 로드되는 즉시 실행되는 완전히 독립적인 스크립트인 셈입니다. 간단하죠?
 
 defer 스크립트를 사용했을 때와 비슷한 예시를 살펴봅시다.
 `long.js`와 `small.js` 스크립트가 있고, `defer` 대신 `async`를 사용했습니다.
@@ -161,7 +160,7 @@ document.body.append(script); // (*)
 
 아래 예시에선 `loadScript(src)` 함수는 스크립트를 추가하고 `async`를 `false`로 설정합니다.
 
-So `long.js` always runs first (as it's added first):
+따라서 `long.js`는 (가장 먼저 추가되었기 때문에) 항상 먼저 실행됩니다.
 
 ```js run
 function loadScript(src) {

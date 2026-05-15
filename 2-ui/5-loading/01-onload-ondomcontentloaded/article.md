@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", ready);
   function ready() {
     alert('DOM이 준비되었습니다!');
 
-    // 이미지가 로드되지 않은 상태(캐시된 경우가 아니라면)이기 때문에 사이즈는 0x0입니다.
+    // 이미지가 아직 로드되지 않았기 때문에(캐시된 경우 제외) 크기는 0x0입니다.
     alert(`이미지 사이즈: ${img.offsetWidth}x${img.offsetHeight}`);
   }
 
